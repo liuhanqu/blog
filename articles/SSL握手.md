@@ -1,13 +1,3 @@
-# HTTPS 的定义
-
-HTTPS（HyperText Transfer Protocol over Secure Socket Layer)，在 HTTP 的后面加多了一个 S，可以理解在 HTTP 的基础上了多了一个 secure，即安全的 HTTP。HTTP 是应用层协议，在运行在 TCP 层之上，HTTPS 就是在 TCP 和 HTTP 层加了一层 SSL 层，向上提供加密和解密的服务。
-
-# HTTPS 为什么安全
-
-通过非对称加密来协商对称加密的密钥，握手成功之后便可使用对称加密来做加密通信，对于 RSA 来说，客户端是用 RSA 的公钥把预主密钥加密后传给服务器，服务器再用私钥来解密，双方再通过相同的算法来生成会话密钥，之后的应用层数据就可以通过会话密钥来加密通信。
-
-# HTTPS 握手过程
-
 1.  客户端请求 Client Hello
 
 ```
@@ -51,8 +41,8 @@ HTTPS（HyperText Transfer Protocol over Secure Socket Layer)，在 HTTP 的后�
 
 ![](/images/https-handshake.jpg)
 
-# 参考链接
+# 参考资料
 
-[SSL/TLS in Detail](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc785811(v=ws.10)>)
-[史上最完整的 Tengine HTTPS 原理解析、实践与调试](https://yq.aliyun.com/articles/597667?utm_content=m_51050)
-[HTTPS 权威指南]
+1.  [SSL/TLS in Detail](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc785811(v=ws.10)>)
+2.  [史上最完整的 Tengine HTTPS 原理解析、实践与调试](https://yq.aliyun.com/articles/597667?utm_content=m_51050)
+3.  [HTTPS 权威指南]
