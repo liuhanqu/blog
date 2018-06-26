@@ -39,7 +39,7 @@
 
 完整的握手过程如下图
 
-![](/images/https-handshake.jpg)
+![](/images/https/https-handshake.jpg)
 
 # 参考资料
 

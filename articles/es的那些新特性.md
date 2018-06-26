@@ -301,7 +301,7 @@ mySet.add(5); // Set(2) {1, 5}
 mySet.add(5); // Set { 1, 5 }
 ```
 
-我们经常数组去重的方法是利用 Set 来完成的
+我们经常看到数组去重的方法是利用 Set 来完成的
 
 ```js
 const arr = [1, 2, 3, 3, 4, 4, 5];
@@ -489,7 +489,7 @@ async function getUserInfo() {
 }
 ```
 
- 虽然使用 async 可以让我们的函数看起来像同步一样的，但对于一些新手来说，如果不小心的话，会犯一些小错误。 如上面的代码，getUserName 和 getUserPhone 两者是没有关联的， 并不需要等到 getUserName 完成之后才去调用 getUserPhone，这两个是可以并行执行的。
+虽然使用 async 可以让我们的函数看起来像同步一样的，但对于一些新手来说，如果不小心的话，会犯一些小错误。 如上面的代码，getUserName 和 getUserPhone 两者是没有关联的，并不需要等到 getUserName 完成之后才去调用 getUserPhone，这两个是可以并行执行的。
 
 ```js
 async function getUserInfo() {
