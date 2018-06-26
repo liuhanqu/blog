@@ -40,7 +40,7 @@ obj.b = 2;
 const name = 'laohan';
 const grettings = `hello ${name}`;
 
-console.log(grettings); // => 'hello laohan'
+console.log(grettings); // => hello laohan
 
 const html = `
   <div>
@@ -141,7 +141,7 @@ const obj = {
   },
 };
 
-obj.getName(); // => 'laohan'
+obj.getName(); // => laohan
 
 const obj = {
   name: 'laohan',
@@ -257,6 +257,58 @@ asyncFunc()
 
 这篇文章 [We have a problem with promises](http://fex.baidu.com/blog/2015/07/we-have-a-problem-with-promises/) 可以看一看，理解里面的问题就算懂了。
 
+## Map
+
+跟 Object 类似，用于保存键值对。但还是有一些区别
+
+- Object 的 key 只能是字符串或者 Symbols, Map 的 key 可以是任意值，包含数字、对象等
+- Map 可以通过 size 获得键值对的个数，而 Object 不行
+- Map 是可迭代的，而 Object 的迭代需要先获取它的键数组然后再进行迭代
+
+```js
+const m = new Map();
+const obj = {};
+const fn = () => {};
+m.set(obj, 'object');
+m.set(fn, 'function');
+m.set(1, 'number');
+
+m.size; // => 3
+
+m.get(obj); // => object
+m.get(fn); // => function
+
+const mm = new Map();
+mm.set(1, 'a');
+mm.set(2, 'b');
+
+for (var [key, value] of mm) {
+  console.log(key + ' = ' + value);
+}
+// output
+// 1 = a
+// 2 = b
+```
+
+## Set
+
+与 Array 类似，不同的在于 Set 中的元素只会出现一次，即元素是唯一的
+
+```js
+const s = new Set();
+mySet.add(1); // Set(1) {1}
+mySet.add(5); // Set(2) {1, 5}
+mySet.add(5); // Set { 1, 5 }
+```
+
+我们经常数组去重的方法是利用 Set 来完成的
+
+```js
+const arr = [1, 2, 3, 3, 4, 4, 5];
+const uniArr = Array.from(new Set(arr));
+console.log(uniArr); // => [1, 2, 3, 4, 5]
+```
+
 ## for...of
 
 新的循环方式，代替之前的 for...in 和 forEach 方法。
@@ -268,8 +320,8 @@ for (const x of arr) {
   console.log(x);
 }
 // Output
-// 'a'
-// 'b'
+// a
+// b
 ```
 
 break 和 continue 也可以用于 for...of 循环
