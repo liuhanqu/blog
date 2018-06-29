@@ -309,17 +309,13 @@ class GenericNumber<T> {
 
 详细信息可以参考这里：[TypeScript Handbook - Generics](https://www.typescriptlang.org/docs/handbook/generics.html)
 
-<!-- TypeScript 的一个特性就是支持静态类型，意味着可以声明一个变量的时候，顺便声明它的类型，然后编译器就会确保别的类型的值不会赋值给该变量。如果你声明变量的时候没有声明类型，那么会根据变量的值自动推导变量的类型。
+## 快速开始
 
-```ts
-let str: string = 'abc';
+首先，全局安装 typescript
 
-str = 1;
-// 编辑器会提示错误 => 不能将类型“1”分配给类型“string”。
-
-let num = 1;
-// 没有声明 num 的类型，会根据它的值 1， 推导出 num 是一个 number 类型
-``` -->
+```bash
+npm install -g typescript
+```
 
 ## 参考资料
 
