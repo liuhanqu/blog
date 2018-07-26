@@ -45,4 +45,4 @@
 
 1.  [SSL/TLS in Detail](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc785811(v=ws.10)>)
 2.  [史上最完整的 Tengine HTTPS 原理解析、实践与调试](https://yq.aliyun.com/articles/597667?utm_content=m_51050)
-3.  [HTTPS 权威指南]
+3.  HTTPS 权威指南
